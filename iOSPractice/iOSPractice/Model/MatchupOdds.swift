@@ -7,12 +7,28 @@
 
 import Foundation
 
+enum MatchupOddsKeys {
+    case firstTeam
+    case secondTeam
+    case firstTeamML
+    case secondTeamML
+    case firstTeamSpread
+    case secondTeamSpread
+    case firstTeamOverUnder
+    case secondTeamOverUnder
+}
+
+enum MatchupOddsValues {
+    case double
+    case string
+}
+
 //per one matchup
 class MatchupOdds: Hashable {
     
-    var matchupOdds: [String: Double]
+    var matchupOdds: [MatchupOddsKeys: MatchupOddsValues]
     
-    init(matchupOdds: [String: Double]) {
+    init(matchupOdds: [MatchupOddsKeys: MatchupOddsValues]) {
         self.matchupOdds = matchupOdds
     }
     

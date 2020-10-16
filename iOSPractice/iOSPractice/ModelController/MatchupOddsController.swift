@@ -26,10 +26,12 @@ class MatchupOddsController {
     
     func prepareOddsDataSource() {
         section = MatchupOddsSection()
-        //extract each matchup from all three objects and organize into matchupOddsObject
-        let matchupOdds = MatchupOdds(matchupOdds: ["":4.5])
+        let matchupOdds = MatchupOdds(matchupOdds: [.firstTeam: "Washington", .secondTeam: "Baltimore"])
         section?.allSections.first?.allOdds.append(matchupOdds)
         
+    }
+    
+    func configureOverUnderOdds() -> MatchupOdds {
         
     }
     
